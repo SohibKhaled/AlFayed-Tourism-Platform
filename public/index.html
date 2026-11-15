@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الفايد للسياحة | صمّم رحلتك واحجز لحظياً</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Readex+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <a href="#main-workspace" class="skip-link">انتقل إلى المحتوى الرئيسي</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-lockup" id="brand-home-link">
+        <span class="brand-emblem" id="brand-crest" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title" id="brand-name">الفايد للسياحة</span>
+          <span class="brand-sub" id="brand-sub">Powered by Global EIS</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary Navigation">
+        <button type="button" class="nav-tab" data-view="store" aria-selected="true">
+          <span id="nav-store-label">صمّم رحلتك واحجز</span>
+        </button>
+        <button type="button" class="nav-tab" data-view="bookings" aria-selected="false">
+          <span id="nav-bookings-label">حجوزاتي</span>
+          <span class="nav-badge num" id="bookings-count-badge" hidden>0</span>
+        </button>
+        <button type="button" class="nav-tab" data-view="admin" aria-selected="false">
+          <span id="nav-admin-label">إدارة الهامش والبث اللحظي</span>
+        </button>
+      </nav>
+
+      <div class="header-controls">
+        <div class="live-pill" id="live-status-pill" aria-live="polite">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="live-status-text">مزامنة لحظية نشطة</span>
+        </div>
+
+        <select id="currency-select" class="control-select mono" aria-label="Currency">
+          <option value="EGP">EGP</option>
+          <option value="SAR">SAR</option>
+          <option value="AED">AED</option>
+          <option value="USD">USD</option>
+        </select>
+
+        <button type="button" id="lang-toggle-btn" class="lang-toggle">English</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section" id="hero-section">
+    <svg class="hero-ambient-svg" viewBox="0 0 1440 460" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <radialGradient id="hero-glow-a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 120) rotate(25) scale(460 220)">
+          <stop offset="0%" stop-color="#D4A449" stop-opacity="0.22"/>
+          <stop offset="100%" stop-color="#D4A449" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="hero-glow-b" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1150 260) rotate(-18) scale(520 260)">
+          <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.22"/>
+          <stop offset="100%" stop-color="#14B8A6" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="260" cy="120" rx="460" ry="220" fill="url(#hero-glow-a)"/>
+      <ellipse cx="1150" cy="260" rx="520" ry="260" fill="url(#hero-glow-b)"/>
+      <path class="hero-flight-path" d="M-40 340 Q 340 90 760 215 T 1490 95" stroke="rgba(229,186,103,0.48)" stroke-width="1.6"/>
+      <path class="hero-flight-path" d="M80 410 Q 520 225 980 285 T 1520 175" stroke="rgba(94,234,212,0.38)" stroke-width="1.25"/>
+      <circle cx="760" cy="215" r="4" fill="#F2CE7E" opacity="0.8"/>
+      <circle cx="980" cy="285" r="3.5" fill="#5EEAD4" opacity="0.75"/>
+    </svg>
+
+    <div class="container hero-inner">
+      <div class="hero-header-flex">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">
+            <span id="hero-eyebrow-text">أول تجربة حجز تفاعلية بالكامل • فنادق وطيران وتأشيرات بدون تسجيل دخول</span>
+          </div>
+          <h1 class="hero-title">
+            <span id="hero-title-prefix">صمّم رحلتك خطوة بخطوة كأنك في صالة VIP مع </span><span class="accent-gold" id="hero-title-brand">الفايد للسياحة</span>
+          </h1>
+          <p class="hero-subtitle" id="hero-subtitle"></p>
+
+          <div class="hero-trust-row">
+            <span class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span id="trust-no-login"></span>
+            </span>
+            <span class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              <span id="trust-live-sync"></span>
+            </span>
+            <span class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span id="trust-zero-double"></span>
+            </span>
+            <span class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span id="trust-bundle"></span>
+            </span>
+          </div>
+        </div>
+
+        <div class="experience-switcher-card" role="group" aria-label="Experience Mode">
+          <button type="button" class="exp-pill-btn" data-exp-mode="journey" aria-pressed="true" id="btn-mode-journey">
+            <span class="exp-pill-icon">✨</span>
+            <span class="exp-pill-copy">
+              <strong id="exp-journey-title">ستوديو الرحلة التفاعلي</strong>
+              <small id="exp-journey-sub">صمّم الميعاد والطيران والفندق وختم التذكرة بمتعة</small>
+            </span>
+          </button>
+          <button type="button" class="exp-pill-btn" data-exp-mode="explorer" aria-pressed="false" id="btn-mode-explorer">
+            <span class="exp-pill-icon">🧭</span>
+            <span class="exp-pill-copy">
+              <strong id="exp-explorer-title">الكتالوج الكامل والفلاتر</strong>
+              <small id="exp-explorer-sub">استعراض كل الفنادق والرحلات والأسعار دفعة واحدة</small>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Classic Quick Search Dock (shown cleanly in Explorer mode) -->
+      <search id="explorer-search-shell" hidden>
+        <div class="search-dock">
+          <div class="search-mode-bar">
+            <div class="segmented-tabs" role="group" aria-label="Travel Category">
+              <button type="button" class="seg-btn" data-search-mode="all" aria-selected="true">
+                <span class="seg-label" id="seg-all-label">الكل (فنادق وطيران)</span>
+              </button>
+              <button type="button" class="seg-btn" data-search-mode="hotels" aria-selected="false">
+                <span class="seg-label" id="seg-hotels-label">فنادق ومنتجعات</span>
+              </button>
+              <button type="button" class="seg-btn" data-search-mode="flights" aria-selected="false">
+                <span class="seg-label" id="seg-flights-label">تذاكر طيران</span>
+              </button>
+              <button type="button" class="seg-btn seg-btn-package" data-search-mode="package" aria-selected="false">
+                <span class="seg-label" id="seg-package-label">باكدج طيران + فندق</span>
+                <span class="seg-save-pill num" id="seg-package-badge">-6%</span>
+              </button>
+            </div>
+
+            <div class="search-right-meta">
+              <label class="nat-inline-label" for="search-nationality" id="lbl-nationality">الجواز:</label>
+              <select class="nat-inline-select" id="search-nationality" name="nationality">
+                <option value="EG">🇪🇬 مصر (EG)</option>
+                <option value="SA">🇸🇦 السعودية (SA)</option>
+                <option value="AE">🇦🇪 الإمارات (AE)</option>
+                <option value="JO">🇯🇴 الأردن (JO)</option>
+              </select>
+              <div class="zero-login-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span id="zero-login-chip-text">بدون حساب أو تسجيل دخول</span>
+              </div>
+            </div>
+          </div>
+
+          <form id="hero-search-form" class="search-grid">
+            <div class="field-group">
+              <label class="field-label" for="search-destination" id="lbl-destination">الوجهة / المدينة</label>
+              <select class="input-control" id="search-destination" name="destination"></select>
+            </div>
+
+            <div class="field-group" id="field-origin">
+              <label class="field-label" for="search-origin" id="lbl-origin">مطار المغادرة</label>
+              <select class="input-control" id="search-origin" name="origin"></select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="search-checkin" id="lbl-checkin">تاريخ الوصول</label>
+              <input class="input-control mono" type="date" id="search-checkin" name="checkInDate">
+            </div>
+
+            <div class="field-group" id="field-checkout">
+              <label class="field-label" for="search-checkout" id="lbl-checkout">تاريخ المغادرة <span class="nights-tag num" id="search-nights-tag">2 ليالٍ</span></label>
+              <input class="input-control mono" type="date" id="search-checkout" name="checkOutDate">
+            </div>
+
+            <div class="field-group field-guests-wrap">
+              <span class="field-label" id="lbl-guests">المسافرون والغرف</span>
+              <button type="button" class="input-control guests-trigger" id="guests-popover-btn" commandfor="guests-popover" command="toggle-popover">
+                <span id="guests-summary-text" class="num">2 بالغ • 1 غرفة</span>
+                <span class="caret-tiny" aria-hidden="true">▾</span>
+              </button>
+              <div id="guests-popover" popover class="guests-popover-card">
+                <div class="stepper-row">
+                  <span id="lbl-adults-step">البالغون</span>
+                  <div class="stepper-ctrl">
+                    <button type="button" class="step-btn" data-step="adults" data-delta="-1" aria-label="Decrease adults">−</button>
+                    <span class="num" id="step-val-adults">2</span>
+                    <button type="button" class="step-btn" data-step="adults" data-delta="1" aria-label="Increase adults">+</button>
+                  </div>
+                </div>
+                <div class="stepper-row">
+                  <span id="lbl-children-step">الأطفال</span>
+                  <div class="stepper-ctrl">
+                    <button type="button" class="step-btn" data-step="children" data-delta="-1" aria-label="Decrease children">−</button>
+                    <span class="num" id="step-val-children">0</span>
+                    <button type="button" class="step-btn" data-step="children" data-delta="1" aria-label="Increase children">+</button>
+                  </div>
+                </div>
+                <div class="stepper-row">
+                  <span id="lbl-rooms-step">الغرف</span>
+                  <div class="stepper-ctrl">
+                    <button type="button" class="step-btn" data-step="rooms" data-delta="-1" aria-label="Decrease rooms">−</button>
+                    <span class="num" id="step-val-rooms">1</span>
+                    <button type="button" class="step-btn" data-step="rooms" data-delta="1" aria-label="Increase rooms">+</button>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" style="inline-size:100%;" commandfor="guests-popover" command="hide-popover" id="guests-done-btn">تطبيق</button>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary search-submit-btn">
+              <span id="search-submit-label">عرض الأسعار اللحظية</span>
+            </button>
+          </form>
+        </div>
+      </search>
+    </div>
+  </section>
+
+  <aside class="live-ticker-strip" id="live-ticker-strip" aria-label="Live Feed Updates">
+    <div class="container ticker-inner">
+      <div class="ticker-event">
+        <span class="ticker-badge" id="ticker-badge">Global EIS</span>
+        <span class="ticker-message" id="ticker-message"></span>
+      </div>
+      <span class="mono" id="ticker-time" style="font-size:0.78rem; color:var(--ink-muted);"></span>
+    </div>
+  </aside>
+
+  <main id="main-workspace" class="container section-block" tabindex="-1"></main>
+
+  <!-- Floating Trip Bundle + Compare Dock -->
+  <aside id="floating-dock-root" class="floating-dock-wrap" aria-live="polite" hidden></aside>
+
+  <!-- Checkout Dialog (Single & Dual-Lock Package) -->
+  <dialog id="checkout-dialog" class="booking-dialog" closedby="any" aria-labelledby="checkout-dialog-title">
+    <div class="dialog-header">
+      <h2 class="dialog-title" id="checkout-dialog-title">إتمام الحجز الفوري</h2>
+      <button type="button" class="dialog-close" command="request-close" commandfor="checkout-dialog" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="dialog-body" id="checkout-dialog-body"></div>
+  </dialog>
+
+  <!-- Rich Details / Room Tiers / Comparison Dialog -->
+  <dialog id="detail-dialog" class="booking-dialog booking-dialog-wide" closedby="any" aria-labelledby="detail-dialog-title">
+    <div class="dialog-header">
+      <h2 class="dialog-title" id="detail-dialog-title">التفاصيل الكاملة والخيارات</h2>
+      <button type="button" class="dialog-close" command="request-close" commandfor="detail-dialog" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="dialog-body" id="detail-dialog-body"></div>
+  </dialog>
+
+  <div id="toast-stack" class="toast-stack" aria-live="polite" aria-atomic="false"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-meta">
+        <span class="footer-crest" id="footer-crest" aria-hidden="true"></span>
+        <div>
+          <strong style="color:#FFFFFF; font-size:1.05rem; display:block;" id="footer-brand-name">الفايد للسياحة</strong>
+          <span class="mono" style="color:var(--brand-gold-bright); font-size:0.76rem;">Powered by Global EIS • Zero-Login Live Travel Engine</span>
+        </div>
+      </div>
+      <p style="font-size:0.85rem; margin:0;" id="footer-note"></p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

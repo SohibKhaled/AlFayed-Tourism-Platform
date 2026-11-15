@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="afy-bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B2240"/>
+      <stop offset="55%" stop-color="#08162C"/>
+      <stop offset="100%" stop-color="#042F2E"/>
+    </linearGradient>
+    <linearGradient id="afy-gold" x1="12" y1="10" x2="52" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F7DC98"/>
+      <stop offset="50%" stop-color="#D4A449"/>
+      <stop offset="100%" stop-color="#A87822"/>
+    </linearGradient>
+    <linearGradient id="afy-teal" x1="18" y1="44" x2="48" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#99F6E4"/>
+    </linearGradient>
+  </defs>
+  <!-- Luxury Sapphire-Emerald Crest Backing -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#afy-bg)"/>
+  <rect x="3" y="3" width="58" height="58" rx="15" stroke="url(#afy-gold)" stroke-opacity="0.45" stroke-width="1.5"/>
+
+  <!-- Interlocking Arabian Architectural Arch & Compass Octagon -->
+  <path d="M32 9.5L47.9 16.1L54.5 32L47.9 47.9L32 54.5L16.1 47.9L9.5 32L16.1 16.1L32 9.5Z" stroke="url(#afy-gold)" stroke-width="2.1" stroke-linejoin="round"/>
+  <path d="M21 44V28.5C21 21.8 26.2 16 32 14C37.8 16 43 21.8 43 28.5V44" stroke="url(#afy-gold)" stroke-opacity="0.55" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- Dynamic Flight & Horizon Sweeping Wing -->
+  <path d="M16.5 38.5C23.5 36.2 31.5 30.8 43.8 20.5" stroke="url(#afy-teal)" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M44.5 19.8L35.2 21.2L39.6 25.1L41.8 29.8L44.5 19.8Z" fill="url(#afy-teal)"/>
+
+  <!-- Prestige North Star & Hospitality Origin Gem -->
+  <circle cx="21" cy="39.2" r="3" fill="url(#afy-gold)"/>
+  <path d="M32 19L33.6 22.8L37.4 24.4L33.6 26L32 29.8L30.4 26L26.6 24.4L30.4 22.8L32 19Z" fill="url(#afy-gold)"/>
+</svg>
